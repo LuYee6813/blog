@@ -9,12 +9,12 @@ comments: true
 ---
 
    
-看保護機制
+## 1.看保護機制
 > checksec start
 
 ![](https://i.imgur.com/27SRlvR.png)
 
-看源碼
+## 2.看源碼
 > objdump -d -M intel start
 
 
@@ -56,7 +56,7 @@ Disassembly of section .text:
 
 ```
 
-## exploit
+## 3.exploit
 ```python
 #!/usr/bin/env python3
 from pwn import *

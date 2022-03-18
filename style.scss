@@ -873,6 +873,7 @@ nav {
   @include mobile {
     display: block;
     width: 100%;
+    background-color: black;
     //border-top: 1px solid $footer-border-color;
     //background-color: $footer-background-color;
   }

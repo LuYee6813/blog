@@ -329,6 +329,7 @@ img {
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: $background-color;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/blog/images/nav.jpg");
 	height: 100%;
 	top: 0;
 	left:0;

@@ -1,14 +1,12 @@
 ---
 layout: post
-title: 漂亮的Ascii Banner
+title: 彩色的Ascii Banner
 date: 2022-03-18
 Author: LuYee6813
 tags: [other]
 comments: true
 ---
-
-# 彩色 Ascii Banner
-[TOC]
+# 彩色的Ascii Banner
 
 ## 1. 安裝
 ```linux

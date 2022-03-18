@@ -23,6 +23,11 @@ body {
   font-family: $base-font;
   color: $base-color;
   line-height: 1.7em;
+	
+  &:after {
+    display: none;
+    content: url("/blog/images/nav.jpg");
+  }
 }
 
 .container {

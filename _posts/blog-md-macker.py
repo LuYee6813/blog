@@ -1,9 +1,9 @@
 import pathlib 
 from pathlib import Path
 
-title=input("文章名稱:")
-date=input("時間(ex:2022-02-02):")
-tag=input("標籤:")
+title=input("title:")
+date=input("date(ex:2022-02-02):")
+tag=input("tag:")
 
 current_directory=pathlib.Path(__file__).parent.absolute()
 myfile = Path(f'{current_directory}\{date}-{title}.md')

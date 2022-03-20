@@ -2,7 +2,7 @@ import pathlib
 from pathlib import Path
 
 title=input("文章名稱:")
-date=input("時間:")
+date=input("時間(ex:2022-02-02):")
 tag=input("標籤:")
 
 current_directory=pathlib.Path(__file__).parent.absolute()

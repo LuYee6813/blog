@@ -3,7 +3,7 @@ layout: post
 title: NTU Computer Security
 date: 2022-03-19
 Author: LuYee6813
-tags: [knowlodge]
+tags: [Knowledge]
 toc: true
 ---
 ## 1. Program Structure

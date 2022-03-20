@@ -3,7 +3,7 @@ layout: post
 title: pwnable start [100pt]
 date: 2022-03-18
 Author: LuYee6813
-tags: [write-ups]
+tags: [Write-Ups]
 toc: true
 comments: true
 ---

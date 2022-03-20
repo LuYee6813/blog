@@ -3,7 +3,7 @@ layout: post
 title: 彩色的Ascii Banner
 date: 2022-03-18
 Author: LuYee6813
-tags: [other]
+tags: [Others]
 comments: true
 toc: true
 ---

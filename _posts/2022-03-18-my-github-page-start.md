@@ -3,7 +3,7 @@ layout: post
 title: Blog成立
 date: 2022-03-18
 Author: LuYee6813
-tags: [other]
+tags: [Others]
 comments: true
 ---
 第一次用github page 來架設blog

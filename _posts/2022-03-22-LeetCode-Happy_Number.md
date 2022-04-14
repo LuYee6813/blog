@@ -26,10 +26,10 @@ Explanation:
 - 1 * 1 + 0 * 0 + 0 * 0 = 1
 
 ## 2. 思路
-因為不是Happy number的話會進入迴圈(loops endlessly in a cycle) 所以可想到[floyd’s cycle detection](https://en.wikipedia.org/wiki/Cycle_detection)
+因為不是Happy number的話會進入迴圈(loops endlessly in a cycle) 所以可想到 [floyd’s cycle detection](https://en.wikipedia.org/wiki/Cycle_detection)
 
 ## 3.解題
-```C
+```c
 int check_happy(int target)
 {    
     int sum = (target % 10)*(target % 10);    

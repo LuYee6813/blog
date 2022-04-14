@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Happy Number [202]
+title: LeetCode[202] Happy Number 
 date: 2022-03-22
 Author: LuYee6813
 tags: [LeetCode]

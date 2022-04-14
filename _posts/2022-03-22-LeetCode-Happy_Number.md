@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Happy Number
+title: Happy Number [202]
 date: 2022-03-22
 Author: LuYee6813
 tags: [LeetCode]
@@ -26,7 +26,7 @@ Explanation:
 - 1 * 1 + 0 * 0 + 0 * 0 = 1
 
 ## 2. 思路
-因為不是Happy number的話會進入迴圈(loops endlessly in a cycle) 所以可想到 [floyd’s cycle detection](https://en.wikipedia.org/wiki/Cycle_detection)
+因為不是Happy number的話會進入迴圈 (loops endlessly in a cycle) 所以可想到 [floyd’s cycle detection](https://en.wikipedia.org/wiki/Cycle_detection)
 
 ## 3.解題
 ```c

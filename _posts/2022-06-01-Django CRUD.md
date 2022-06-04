@@ -9,6 +9,7 @@ toc: true
 
 ## 資料庫模型建立
 ### 1. 建立資料庫模型
+
 > models.py
 ```python
 from django.db import models

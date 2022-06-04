@@ -20,7 +20,16 @@ class student(models.Model):
     Email = models.EmailField(max_length=100, blank=True, default='')
     Phone = models.CharField(max_length=50, blank=True, default='')
     Addr = models.CharField(max_length=255,blank=True, default='')
- 
+    Class = models.CharField(max_length=255,blank=True,default='')
+    ClassOfficers = models.CharField(max_length=255,blank=True,default='')
+    Commendation = models.IntegerField(null=False,blank=True,default=0)
+
+# max_length代表最大長度20字元
+# default='M'代表預設值為M
+# null=False代表不可空白
+# blank=True代表預設空字串
+# editable代表是否可顯示，預設為True
+# unique代表是否為唯一值，預設為False
 def __str__(self):
     return self.Name
 ```
@@ -67,9 +76,13 @@ def Create(request):
     Email = 'Andy@gmail.com'
     Phone =  '0987654321'
     Addr =  '新北市三重區xx路xx號x樓'
+    Class = '301'
     ClassOfficers = '班長'
-    data = student.objects.create(Name=Name, Sex=Sex, Birthday=Birthday, Email=Email,Phone=Phone, Addr=Addr) 
+    data = student.objects.create(Name=Name, Sex=Sex, Birthday=Birthday, Email=Email,Phone=Phone, Addr=Addr,Class=Class,
+    ClassOfficers=ClassOfficers) 
     data.save()  #寫入資料庫
+
+    return render(request,"home.html",locals())
 ```
 
 ## 讀取資料(Read)
@@ -78,12 +91,13 @@ def Read(request):
     # 取得student所有資料
     student_all = student.objects.all()
     # 取得名字為root的學生(Get用於單個)
-    cName_root_Get = student.objects.get(Name="root")
+    Name_root_Get = student.objects.get(Name="root")
     # 取得名字為Andy的學生(Filter用於多個)
-    cName_Andy_Filter =  student.objects.filter(Name="Andy")
+    Name_Andy_Filter =  student.objects.filter(Name="Andy")
     # 取得幹部為班長的學生
+    ClassOfficers＿Filter = student.objects.filter(ClassOfficers="班長")
 
-    return render(request,"home.html")
+    return render(request,"home.html",locals())
 ```
 
 ## 修改資料(Update)
@@ -91,21 +105,33 @@ def Read(request):
 def Update(request):
     # 需先取得資料 -> 修改 -> 存擋
 
-    # 一筆資料
-    cName_root_Get = student.objects.get(Name="root")
-    cName_root_Get.cBirthday = "2022-06-25"
-    cName_root_Get.cAddr = "台北市大安區基隆路xxx號"
-    cName_root_Get.save() #存檔
+    # 修改一筆
+    Name_root_Get = student.objects.get(Name="root")
+    Name_root_Get.Birthday = "2022-06-25"
+    Name_root_Get.Addr = "台北市大安區基隆路xxx號"
+    Name_root_Get.save() #存檔
 
-    # 多筆資料
-    
+    # 修改多筆
+    ClassOfficers＿Filter = student.objects.filter(ClassOfficers="班長")
+    for x in ClassOfficers_Filter:
+        x.Commendation += 1 # 嘉獎+1
+    ClassOfficers_Filter.save() 
 
-    return render(request,"home.html")
+    return render(request,"home.html",locals())
 ```
 
 ## 刪除資料(Delete)
 ```python 
 def Delete(request):
-    
-    return render(request,"home.html")
+    # 需先取得資料 -> 刪除
+
+    # 刪除一筆
+    Name_root_Get = student.objects.get(Name="root")
+    Name_root_Get.delete()
+
+    # 刪除多筆
+    Name_Andy_Filter = student.objects.filter(Name="Andy")
+    Name_Andy_Filter.delete()
+
+    return render(request,"home.html",locals())
 ```

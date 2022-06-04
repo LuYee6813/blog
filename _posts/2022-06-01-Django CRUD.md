@@ -6,7 +6,6 @@ Author: LuYee6813
 tags: [Django]
 toc: true
 ---
-# Django 資料庫CRUD 
 
 ## 資料庫模型建立
 ### 1. 建立資料庫模型

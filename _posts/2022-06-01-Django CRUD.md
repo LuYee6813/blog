@@ -24,15 +24,17 @@ class student(models.Model):
     ClassOfficers = models.CharField(max_length=255,blank=True,default='')
     Commendation = models.IntegerField(null=False,blank=True,default=0)
 
-# max_length代表最大長度20字元
-# default='M'代表預設值為M
-# null=False代表不可空白
-# blank=True代表預設空字串
-# editable代表是否可顯示，預設為True
-# unique代表是否為唯一值，預設為False
-def __str__(self):
-    return self.Name
+    def __str__(self):
+        return self.Name
+
+    # max_length代表最大長度20字元
+    # default='M'代表預設值為M
+    # null=False代表不可空白
+    # blank=True代表預設空字串
+    # editable代表是否可顯示，預設為True
+    # unique代表是否為唯一值，預設為False
 ```
+
 ### 2. 建立migration資料檔
 
 ```

@@ -98,7 +98,7 @@ def Read(request):
     # 取得名字為Andy的學生(Filter用於多個)
     Name_Andy_Filter =  student.objects.filter(Name="Andy")
     # 取得幹部為班長的學生
-    ClassOfficers＿Filter = student.objects.filter(ClassOfficers="班長")
+    ClassOfficers_Filter = student.objects.filter(ClassOfficers="班長")
 
     return render(request,"home.html",locals())
 ```

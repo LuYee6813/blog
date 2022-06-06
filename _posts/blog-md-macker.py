@@ -6,7 +6,7 @@ date=input("date(ex:2022-02-02):")
 tag=input("tag:")
 
 current_directory=pathlib.Path(__file__).parent.absolute()
-myfile = Path(f'{current_directory}\{date}-{title}.md')
+myfile = Path(f'{current_directory}/{date}-{title}.md')
 myfile.touch(exist_ok=True)
 
 f = open(myfile,'w')

@@ -3,7 +3,7 @@ layout: post
 title: picoCTF GET aHEAD [20points]
 date: 2022-03-19
 Author: LuYee6813
-tags: [Write-Ups] [picoCTF] 
+tags: [Write-Ups]
 comments: true
 toc: true
 ---

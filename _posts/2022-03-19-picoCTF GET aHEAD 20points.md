@@ -11,6 +11,7 @@ toc: true
 # GET aHEAD - 20points
 
 看原始碼發現有GET 和 POST兩種方法
+
 ```html
 <!doctype html>
 <html>
